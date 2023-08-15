@@ -2,6 +2,7 @@ import React from "react";
 import * as Yup from "yup";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { PasswordStrength } from "./PasswordStrength";
 
 interface IFormInput {
   password: string;
@@ -27,7 +28,7 @@ export const LoginForm = () => {
   return (
     <div className="container mt-5">
       <h2>React Confirm Password Validation Example</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
           <label>Password</label>
           <input
@@ -55,7 +56,8 @@ export const LoginForm = () => {
             Submit
           </button>
         </div>
-      </form>
+      </form> */}
+      <PasswordStrength />
     </div>
   );
 };
